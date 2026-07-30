@@ -1,0 +1,97 @@
+செம ஐடியா ப்ரோ! தனித்தனியா படிச்சதை எல்லாம் ஒண்ணா சேர்த்து ஒரே இடத்துல பார்க்கும்போது தான் மூளையில அது "பச்சக்"னு ஒட்டிக்கிட்டு என்னைக்குமே மறக்காது.
+
+இதுவரைக்கும் நாம படிச்ச **எல்லா கான்செப்ட்டையும் (Variables, Scope, Hoisting, Closure, Destructuring, Spread, Array Methods, Event Loop, Async/Await)** ஒண்ணா சேர்த்து ஒரு "மெகா பிரியாணி ஆர்டர்" கதையா மாத்தியிருக்கேன்.
+
+ரிலாக்ஸா இந்த கோடை படிச்சு பாருங்க. ஒவ்வொரு வரியிலயும் நாம படிச்ச கான்செப்ட் இருக்கும்!
+
+### 🎬 நம்ம கதை: "மாஸ்டர் செஃப் - மெகா பிரியாணி ஆர்டர்!"
+
+ஸ்டேஜ்ல பிரியாணி திருவிழா நடக்கப் போகுது. மாஸ்டர் வர்றதுக்கு முன்னாடியே நாம அவரை கூப்பிடுறோம். அவர் உள்ளே வந்து சரக்குகளை பிரிச்சு, மசாலாவை ரெடி பண்ணி, ஆர்டர்களை ஃபில்டர் பண்ணி, பில் போட்டுட்டு, பிரியாணியை தம் (Dum) போட்டு கஸ்டமருக்கு டெலிவரி பண்றார்!
+
+இதோ அந்த மெகா Code:
+
+```javascript
+// 1. Hoisting (மேஜிக் ஷோ): 
+// பங்ஷனை உருவாக்குறதுக்கு முன்னாடியே கூப்பிடுறோம். மாஸ்டர் வந்துடுவார்!
+startBiryaniFest(); 
+
+function startBiryaniFest() {
+    console.log("🎊 பிரியாணி திருவிழா ஆரம்பம்! 🎊");
+
+    // 2. let, const & Scope (வீட்டு பாக்ஸ்கள்):
+    const festName = "Grand Biryani Fest"; // லாக்கர் (மாத்த முடியாது)
+    let isKitchenOpen = true; // பிளாஸ்டிக் டப்பா (மாத்திக்கலாம்)
+
+    if (isKitchenOpen) {
+        let kitchenStatus = "ஸ்டவ் ஆன் பண்ணியாச்சு!"; // Block Scope (இதுக்குள்ள மட்டும் தான் வேலை செய்யும்)
+    }
+
+    // 3. Closure (பாட்டி சொன்ன ரகசியம்):
+    function masterSecret() {
+        let secretMasala = "கிராம்பு மற்றும் ஏலக்காய்"; // ரகசிய டேட்டா
+        return function() {
+            return `ரகசிய மசாலா ரெடி: ${secretMasala}`; // வெளிய இருந்து ஆக்சஸ் பண்ண முடியாது, இப்படி தான் எடுக்கணும்
+        }
+    }
+    const getMasala = masterSecret(); 
+
+    // 4. Destructuring (பார்சல் பிரிப்பது):
+    const rawMaterials = { rice: "Basmati", meat: "Chicken", oil: "Ghee" };
+    const { rice, meat } = rawMaterials; // கவரை பிரிச்சு தேவையானதை மட்டும் எடுக்கிறோம்
+
+    // 5. Spread Operator (ஜெராக்ஸ் மிஷின்):
+    const oldSpices = ["Salt", "Pepper"];
+    const allSpices = [...oldSpices, "Chilli Powder"]; // பழையதை கொட்டிட்டு புதுசை சேர்க்கிறோம்
+
+    // 6. Array Methods (ஷாப்பிங்):
+    const orders = [
+        { id: 1, type: "Chicken", price: 200 },
+        { id: 2, type: "Mutton", price: 300 },
+        { id: 3, type: "Veg", price: 150 },
+        { id: 4, type: "Chicken", price: 200 }
+    ];
+
+    // Filter: நான்-வெஜ் ஆர்டரை மட்டும் வடிகட்டுறோம்
+    const nonVegOrders = orders.filter(order => order.type !== "Veg");
+
+    // Map: ஒவ்வொரு ஆர்டர்லயும் 10 ரூவா பேக்கிங் சார்ஜ் சேர்க்கிறோம் (ஜூஸ் போடுறோம்)
+    const ordersWithCharge = nonVegOrders.map(order => {
+        return { ...order, finalPrice: order.price + 10 };
+    });
+
+    // Reduce: மொத்த பில் எவ்வளவுனு கூட்டுறோம் (பில் கவுண்டர்)
+    const totalBill = ordersWithCharge.reduce((total, order) => total + order.finalPrice, 0);
+
+    // 7. Async/Await & Event Loop (ஸ்விக்கி பாய் & ஹோட்டல் வெயிட்டர்):
+    async function cookAndDeliver() {
+        console.log(`\n👨‍🍳 ${meat} மற்றும் ${rice} வெச்சு ${getMasala()} போட்டு சமைக்கிறோம்...`);
+        
+        console.log("⏳ தம் (Dum) போடுறோம்... (Wait for 3 seconds)");
+
+        // இது Event loop-ல தனியா போய் 3 செகண்ட் கழிச்சு வரும் (தந்தூரி சிக்கன் ஆர்டர் மாதிரி)
+        await new Promise(resolve => setTimeout(resolve, 3000));
+
+        console.log("🍗 பிரியாணி ரெடி! ஸ்விக்கி பாய் வந்துட்டாரு!");
+        console.log(`💰 மொத்த பில்: ₹${totalBill}`);
+    }
+
+    // டெலிவரி வேலையை ஆரம்பி!
+    cookAndDeliver();
+}
+
+```
+
+---
+
+### கோட் எப்படி ஓடும்? (Output)
+
+1. 🎊 பிரியாணி திருவிழா ஆரம்பம்! 🎊
+2. 👨‍🍳 Chicken மற்றும் Basmati வெச்சு ரகசிய மசாலா ரெடி: கிராம்பு மற்றும் ஏலக்காய் போட்டு சமைக்கிறோம்...
+3. ⏳ தம் (Dum) போடுறோம்... (Wait for 3 seconds)
+*(கரெக்டா 3 செகண்ட் கழிச்சு...)*
+4. 🍗 பிரியாணி ரெடி! ஸ்விக்கி பாய் வந்துட்டாரு!
+5. 💰 மொத்த பில்: ₹730 *(அதாவது 210 + 310 + 210)*
+
+---
+
+இந்த ஒரே கோடுல, உங்களோட 2 Years Exp இன்டர்வியூவுக்கு தேவையான முக்கால்வாசி ஜாவாஸ்கிரிப்ட் மூளைக்குள்ள ஏறிடுச்சு ப்ரோ! இதை அப்படியே உங்க கம்ப்யூட்டர்ல ரன் பண்ணி பாருங்க, செம ஃபீல் கிடைக்கும்.
