@@ -1,0 +1,158 @@
+For a **2 years experienced React Developer**, you don't need every JavaScript topic. You need the ones that React relies on heavily and that interviewers commonly ask.
+
+# JavaScript Essentials for React.js
+
+## 1. Variables & Constants
+
+* `var`
+* `let`
+* `const`
+
+## 2. Data Types
+
+* Primitive Types
+* Reference Types
+
+## 3. Scope
+
+* Global Scope
+* Function Scope
+* Block Scope
+
+## 4. Hoisting
+
+## 5. Temporal Dead Zone (TDZ)
+
+## 6. Functions
+
+* Function Declaration
+* Function Expression
+* Arrow Functions
+* Callback Functions
+* Higher-Order Functions
+
+## 7. `this` Keyword
+
+## 8. Closures
+
+## 9. Execution Context
+
+## 10. Call Stack
+
+## 11. Objects
+
+* Object Literals
+* Object Methods
+* Object Destructuring
+
+## 12. Arrays
+
+* `map()`
+* `filter()`
+* `find()`
+* `findIndex()`
+* `some()`
+* `every()`
+* `reduce()`
+* `forEach()`
+* `sort()`
+
+## 13. Destructuring
+
+* Object Destructuring
+* Array Destructuring
+
+## 14. Spread Operator (`...`)
+
+## 15. Rest Parameter (`...`)
+
+## 16. Template Literals
+
+## 17. Default Parameters
+
+## 18. Optional Chaining (`?.`)
+
+## 19. Nullish Coalescing (`??`)
+
+## 20. Logical Operators
+
+* `&&`
+* `||`
+* `!`
+
+## 21. Equality Operators
+
+* `==`
+* `===`
+
+## 22. Modules
+
+* `export`
+* `export default`
+* `import`
+
+## 23. Promises
+
+## 24. Async / Await
+
+## 25. Event Loop
+
+## 26. Microtask & Macrotask Queue
+
+## 27. Error Handling
+
+* `try`
+* `catch`
+* `finally`
+* `throw`
+
+## 28. Value vs Reference
+
+## 29. Shallow Copy vs Deep Copy
+
+## 30. Prototypes
+
+## 31. Classes
+
+## 32. `call()`, `apply()`, `bind()`
+
+## 33. Event Handling
+
+* Event Bubbling
+* Event Capturing
+* Event Delegation
+
+## 34. Debouncing
+
+## 35. Throttling
+
+## 36. Strict Mode (`"use strict"`)
+
+---
+
+# Highest Priority for React Interviews (Must Know)
+
+1. `let`, `const`
+2. Scope
+3. Hoisting
+4. TDZ
+5. Functions
+6. Arrow Functions
+7. Closures
+8. `this`
+9. Objects
+10. Arrays (`map`, `filter`, `find`, `reduce`)
+11. Destructuring
+12. Spread & Rest
+13. Template Literals
+14. Optional Chaining
+15. Nullish Coalescing
+16. Modules (`import`/`export`)
+17. Promises
+18. Async/Await
+19. Event Loop
+20. Value vs Reference
+21. Shallow vs Deep Copy
+22. Error Handling
+
+If you're targeting **React Developer (2–3 years)** roles, mastering these topics will cover the majority of JavaScript questions asked before the discussion moves on to React concepts.
